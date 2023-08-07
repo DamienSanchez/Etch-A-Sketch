@@ -8,4 +8,9 @@ function createGrid(gridSize){
         container.appendChild(div);
     }
 }
-createGrid(255);
+createGrid(grid);
+
+const divs = document.querySelector('div')
+divs.addEventListener('mouseover', function(e){
+    e.target.style.backgroundColor = "coral"
+});

@@ -1,11 +1,15 @@
+*{
+    margin: 0;
+}
+
 .container{
     display: flex;
     width: 100vw;
+    height: 100vh;
     flex-wrap: wrap;
 }
 .container > div{
-    height: calc(100vw/17);
-    width: calc(100vw/17);
-    border: 1px solid black;
+    height: calc(100vh/16);
+    width: calc(100vw/16);
     background-color: gray;
 }
