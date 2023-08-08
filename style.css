@@ -6,14 +6,11 @@
 
 .container{
     display: flex;
-    max-width: 940px;
+    width: 500px;
     max-height: 500px;
     flex-wrap: wrap;
     overflow: hidden;
-    
-
 }
-.container > div{
-   
+.container > div{  
     background-color: gray;
 }
