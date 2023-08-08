@@ -2,6 +2,8 @@ const container = document.querySelector('.container');
 const wrapper = document.querySelector('.wrapper');
 const button = document.querySelector('.new-grid');
 const MAX = 100;
+let counterPlus = 0;
+let counterMinus = 255;
 
 //creates new grid
 button.addEventListener('click', () => {
@@ -11,6 +13,8 @@ button.addEventListener('click', () => {
 })
 //creates the grid based on user input
 function createGrid() {
+    counterPlus = 0;
+    counterMinus = 255;
     const userInput = parseInt(prompt("Enter how big you want the sketch pad....Max = 100: "))
     userValue = promptLimit(userInput)
     const gridSize = userValue * userValue
@@ -33,6 +37,8 @@ function promptLimit(userValue) {
 //Hover effect that colors the "pixels"
 const divs = document.querySelector('div')
 divs.addEventListener('mouseover', function (e) {
-    e.target.style.backgroundColor = "pink"
+    counterPlus++
+    counterMinus--
+    e.target.style.backgroundColor = `rgb(${counterPlus}, ${counterMinus}, ${counterPlus})`
 });
 
