@@ -1,16 +1,31 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-.container{
+.wrapper{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: white !important;
+}
+.new-grid{
+    border: none;
+    border-radius: 999px;
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: coral !important;
+    cursor: pointer;
+}
+.container {
     display: flex;
     width: 500px;
     max-height: 500px;
     flex-wrap: wrap;
     overflow: hidden;
 }
-.container > div{  
+
+.container>div {
     background-color: gray;
 }

@@ -1,11 +1,13 @@
 const container = document.querySelector('.container');
+const wrapper = document.querySelector('.wrapper');
+const button = document.querySelector('.new-grid');
 
-const userInput = parseInt(prompt("Enter how big you want the sketch pad....Max = 100: "))
-const grid = userInput*userInput
 
 //creates the grid based on user input
-function createGrid(gridSize){
-    for(i=0; i <= gridSize; i++){
+function createGrid() {
+    const userInput = parseInt(prompt("Enter how big you want the sketch pad....Max = 100: "))
+    const gridSize = userInput * userInput
+    for (i = 0; i <= gridSize; i++) {
         const div = document.createElement('div');
         div.style.width = `calc(500px / ${userInput})`
         div.style.height = `calc(500px / ${userInput})`
@@ -15,8 +17,13 @@ function createGrid(gridSize){
 
 //Hover effect that colors the "pixels"
 const divs = document.querySelector('div')
-divs.addEventListener('mouseover', function(e){
-    e.target.style.backgroundColor = "coral"
+divs.addEventListener('mouseover', function (e) {
+    e.target.style.backgroundColor = "pink"
 });
 
-createGrid(grid);
+button.addEventListener('click', ()=> {
+    while (container.hasChildNodes())
+    container.removeChild(container.firstChild)
+    createGrid()
+})
+
